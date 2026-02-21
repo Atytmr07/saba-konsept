@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-stone-50: oklch(0.98 0.01 75);
+  --color-stone-800: oklch(0.25 0.02 75);
+  /* New Brand Colors from Logo */
+  --color-brand-orange: #f26622;
+  --color-brand-brown: #5e412f;
+
+  --font-serif: "Playfair Display", "Merriweather", serif;
+  --font-sans: "Inter", "Lato", sans-serif;
+
+  --color-background: var(--color-stone-50);
+  --color-foreground: var(--color-stone-800);
+}
+
+@layer base {
+
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
